@@ -30,9 +30,19 @@ def draw_circle(img):
     cv.imshow("image",img)
     cv.waitKey(0)
     cv.destroyAllWindows()
+    
+def draw_ellipse(img):
+    cv.ellipse(img,(200,200),(100,100),0,0,360,(0,0,255),-1)
+    
+    #For ellipse we have to define the center, the length of major and minor 
+    #axes, angle of rotation of ellipse in anticlock vise direction, startangle
+    # and endangle denotes start and end of ellipse arc
+    
+    cv.imshow("image",img)
+    cv.waitKey(0)
+    cv.destroyAllWindows()
 
 def main():
     img = np.zeros((512,512,3), dtype = np.uint8)
-    draw_circle(img)
-    draw_rectangle(img)
+    
 main()
